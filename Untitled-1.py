@@ -209,3 +209,44 @@ else:
 # fatorial é uma multiplicação do numero N por seus antecessores até 1
 # n! = n x (n-1) x (n-2) x ... x 3 x 2 x 1
 
+i = 1
+num = int(input("Digite um número: "))
+res = num
+
+while i < num:
+    res *= i
+    i += 1
+    print(res)
+    
+#QUESTÃO 12- Crie um algoritmo que resolva o valor de S para a série:
+#1 + 1/1 + 1/2 + 1/3 + 1/4 ... 1/N
+
+i = 1
+num1 = int(input("Digite um número: "))
+res1 = 1
+
+while i < num1:
+    res1 += 1/i
+    i += 1
+    print(res1)
+    
+  
+#QUESTÃO 13- 
+
+n = int(input("Digite um número inteiro e positivo: "))
+if n <= 1:
+    print(n , "não é primo")
+else: 
+    primos = []
+    for i in range(2, n+1):
+        primo= True
+        for j in range (2,i):
+            if i % j == 0:
+                primo = False
+                break
+        if primo:
+            primos.append(i)
+                
+    print("Números primos até", n, ":")
+    print(primos)
+    print("Total de números primos: " , len(primos))
